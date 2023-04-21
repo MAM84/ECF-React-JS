@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ECF REACT JS
 
-## Available Scripts
+CEFIM : Formation : Cours JS REACT JS
 
-In the project directory, you can run:
+Projet à rendre pour cette matière afin de valider la formation
 
-### `npm start`
+Consignes :
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Le but de l'exercice est de créer une application web permettant aux utilisateurs de rechercher des informations sur de la musique en utilisant l'immense base de donnée de MusicBrainz.
+Fonctionnement de l'application
+Vous devez impérativement implémenter les fonctionnalités suivantes :
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Rechercher
+En arrivant sur votre application, l'utilisateur doit pouvoir effectuer une recherche via un formulaire.
+Il doit impérativement pouvoir choisir de rechercher parmi les artistes, les albums, les titres de musique ou tous ces critères simultanément.
+L'utilisateur doit pouvoir lancer sa recherche en cliquant sur un bouton ou en appuyant sur Entrée dans l'un des champs.
 
-### `npm test`
+Zone de résultats
+La zone de résultats est là pour afficher les résultats d'une recherche.
+Elle doit permettre d'afficher une liste (sous forme de tableau ou autre) de résultats ayant chacun un numéro (position dans la liste de résultat), un titre, un artiste, un album et un bouton permettant d'obtenir plus d'information sur ledit résultat.
+Le nombre total de résultats de la recherche doit aussi être affiché à l'utilisateur.
+La zone doit également afficher un message si aucune recherche n'a été effectué ou qu'il n'y a aucun résultat pour la recherche en cours.
+Pour finir, si la recherche est en cours (s'il y a un chargement), cela devra être d'une manière ou d'une autre indiqué à l'utilisateur.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Note : l'API ne vous retournera peut-être pas tous les résultats en une seule requête. Il est toutefois impératif que vous affichiez tous les résultats ! (Plus d'informations à ce propos plus bas)
 
-### `npm run build`
+Panneau d'informations
+Une fois les résultats obtenus, l'utilisateur doit pouvoir afficher plus d'informations sur une musique précise. En cliquant sur le bouton associé à un résultat, un panneau (représentable sous la forme d'une modal, d'un panneau latéral, etc...) doit être affiché sur la page afin d'afficher lesdites informations.
+Parmi ces informations, on doit voir apparaitre le titre de la musique, le(s) artiste(s), le(s) album(s), le(s) genre(s), la durée de la musique, la note global qu'elle a reçu (si l'information est disponible) et l'ensemble des pochettes d'albums où elle apparait.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Développement
+Vous devez impérativement respecter les consignes suivantes.
+Langage/framework du projet
+Vous pouvez développer votre application web de 2 façons possibles :
+    En HTML, CSS et JavaScript vanilla (sans framework externe)
+    En ReactJS
+Vous pouvez utiliser toutes les bibliothèques dont vous avez besoin à l'exception des suivantes :
+    jQuery, TypeScript et tout autre extension de langage imposant un format d'écriture du JavaScript.
+    N'importe quel bibliothèque, officiel ou non, de MusicBrainz. Vous devez impérativement manipuler leur API et non une bibliothèque.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Rendu visuel
+Bien que les bibliothèques de gestion du CSS tel que Bootstrap soient autorisées, votre page doit impérativement être user friendly et facile à utiliser.
+Le fait que les actions soient simples et/ou guidées sera prit en compte.
+La beauté graphique n'est quant à elle pas prise en compte, seulement l’expérience utilisateur.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Outils
+Comme précisé plus haut, vous allez utiliser la base de donnée du site MusicBrainz comme source.
+MusicBrainz est un site répertoriant une immense collection de musiques, alimenté par une grande communauté. Leur API est notamment utilisée par de grands sites de streaming musical.
+Vous allez devoir utiliser leur API pour votre application. Les documentations sont disponibles ici :
+    Web Service Documentation
+    Cover Art Documentation
 
-### `npm run eject`
+Faites toutefois attention, certaines de vos opérations nécessitent d'effectuer plusieurs requêtes à la suite. Or, MusicBrainz peut bloquer vos requêtes si ces dernières ne sont pas suffisamment espacées.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Note reçue : 19/20
