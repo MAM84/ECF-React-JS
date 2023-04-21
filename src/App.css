@@ -1,0 +1,322 @@
+/* permanent-marker-regular - latin */
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'),
+       url('./fonts/permanent-marker-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/permanent-marker-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* amiri-regular - latin */
+@font-face {
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/amiri-v14-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Amiri Regular'), local('Amiri-Regular'),
+       url('./fonts/amiri-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/amiri-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/amiri-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/amiri-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/amiri-v14-latin-regular.svg#Amiri') format('svg'); /* Legacy iOS */
+}
+
+/* amiri-700 - latin */
+@font-face {
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/amiri-v14-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Amiri Bold'), local('Amiri-Bold'),
+       url('./fonts/amiri-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/amiri-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/amiri-v14-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/amiri-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/amiri-v14-latin-700.svg#Amiri') format('svg'); /* Legacy iOS */
+}
+
+/* amiri-italic - latin */
+@font-face {
+  font-family: 'Amiri';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./fonts/amiri-v14-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('Amiri Italic'), local('Amiri-Italic'),
+       url('./fonts/amiri-v14-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/amiri-v14-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/amiri-v14-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/amiri-v14-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/amiri-v14-latin-italic.svg#Amiri') format('svg'); /* Legacy iOS */
+}
+
+/* amiri-700italic - latin */
+@font-face {
+  font-family: 'Amiri';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./fonts/amiri-v14-latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local('Amiri Bold Italic'), local('Amiri-BoldItalic'),
+       url('./fonts/amiri-v14-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/amiri-v14-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/amiri-v14-latin-700italic.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/amiri-v14-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/amiri-v14-latin-700italic.svg#Amiri') format('svg'); /* Legacy iOS */
+}
+
+body{
+  background-color:black;
+  text-align: center;
+  color: #fff;
+  font-family: 'Amiri';
+  font-size: 1.5em;
+}
+
+.bodyModalOpen{
+  overflow: hidden;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  background-color: rgb(70, 185, 166);
+}
+
+h1{
+  font-family: 'Permanent Marker';
+  font-size: 3em;
+  color: black;
+  margin: 0 0 0 1em;
+}
+
+main{
+  padding: 3em;
+}
+
+/* Formulaire */
+form{
+  display: flex;
+  justify-content: center;
+}
+
+form label, form input[type=text]::placeholder, .search{
+  font-style: italic;
+}
+
+form label, form input[type=submit], .search{
+  font-weight: 700;
+}
+
+form label{
+  padding-right: 1.5em;
+  text-decoration: underline;
+}
+
+form input[type=text], select, form input[type=submit]{
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+form input[type=text]{
+  width: 70em;
+}
+
+form input[type=submit]{
+  background-color: rgb(70, 185, 166);
+}
+
+form input[type=submit]:hover{
+  background-color:rgb(2, 95, 80);
+  color:#fff;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.search{
+  text-decoration: underline wavy;
+}
+
+.result{
+  text-decoration: underline;
+}
+
+/* Tableau de résultats */
+table{
+  border: 2px solid rgb(70, 185, 166);
+  border-spacing: 0;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+thead {
+  background-color:  rgb(2, 95, 80)
+}
+
+tbody th{
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+tbody tr:nth-child(odd){
+  background-color:rgb(210, 226, 223);
+  color: black;
+}
+
+th{
+  padding: 0px 20px;
+}
+
+.thSeeMore{
+  width: 6rem;
+}
+
+table button{
+  border-radius: 50%;
+  background-color: rgb(2, 95, 80);
+  color: #fff;
+  border-color: rgb(2, 95, 80);
+  width: 2.5rem;
+  font-size: 1.5rem;
+  padding: 0.1rem;
+  margin: 1rem;
+}
+
+table button:hover{
+  background-color:rgb(70, 185, 166);
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.btnSeeMore{
+  background-color: rgb(2, 95, 80);
+  color: #fff;
+  border-radius: 1rem;
+  border-color: rgb(2, 95, 80);
+  font-size: 1.3rem;
+  padding: 0.6rem;
+  margin: 1rem;
+}
+
+.btnSeeMore:hover{
+  background-color:rgb(70, 185, 166);
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+/* Modal */
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 70%);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn .3s both;   
+}
+
+.modal-wrapper{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+  background-color: rgb(2, 95, 80);
+  color: rgb(243, 232, 232);
+  width: 80%;
+  height: auto;
+  max-height: 80%;
+  padding-left: 1em ;
+  padding-right: 1em ;
+  padding-bottom: 1em;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: justify;
+  border: solid 0.1em;
+  border-radius: 0.5em;  
+  animation: slideFromTop .3s both;
+}
+
+.modal-close{
+  position: sticky;
+  top: 2em;
+  margin-left: auto;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 1em;
+  padding: 0.7em;
+  font-size: 0.7em;
+}
+
+.modal-close:hover{
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  transition: .3s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideFromTop {
+  from {transform: translateY(-50px);}
+  to {transform: translateY(0px);}
+}
+
+.modal h1{
+  font-size: 2em;
+  align-self: center;
+}
+
+.modal p{
+  width: 100%;
+  font-size: 0.8em;
+  border-bottom: 1px solid rgb(70, 185, 166);
+}
+
+.coverContent{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cover{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  background-color: gray;
+  margin: 10px;
+}
+
+/* Loader */
+.loader{
+  width: 40px;
+  height: 40px;
+  border: 5px solid white;
+  border-top: 5px solid black;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+  to {
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+  from {
+    transform: translate(-50%, 50%) rotate(360deg);
+  }
+}
